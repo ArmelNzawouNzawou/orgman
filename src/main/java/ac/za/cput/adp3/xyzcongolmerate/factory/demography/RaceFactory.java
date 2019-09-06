@@ -7,9 +7,9 @@ public class RaceFactory {
 
     private static final String SUFFIX = Helper.getSuffixFromClassName(RaceFactory.class); // Expecting RF from (R)ace(F)actory.
 
-    //TODO: implement method body ONLY!
+
     public static Race buildRace(String raceDescription) {
-        throw new UnsupportedOperationException("Not supported yet.");
+
         /**
          * Your implementation goes here
          * INSTRUCTIONS
@@ -18,5 +18,15 @@ public class RaceFactory {
          * 3. Generate random id using SUFFIX (Hint: call generateRandomGivenSuffix method in Helper class)
          * 4. Build and return an object of Race
          */
+        String random;
+
+        random = Helper.generateRandomGivenSuffix(SUFFIX);
+
+        return new Race.Builder()
+                .raceId(random)
+                .raceDescription(raceDescription)
+                .build();
+
+
     }
 }
