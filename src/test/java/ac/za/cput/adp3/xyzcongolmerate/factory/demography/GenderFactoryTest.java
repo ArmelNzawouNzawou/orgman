@@ -4,6 +4,10 @@ import ac.za.cput.adp3.xyzcongolmerate.domain.demography.Gender;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+
 public class GenderFactoryTest {
 
 
@@ -19,7 +23,19 @@ public class GenderFactoryTest {
          * 3. Test the GenderFactory class
          * 4. Assert that the id is generated.
          */
-        
+
+        Gender feminine = GenderFactory.buildGender("feminine");
+
+
+        String expected = "feminine";
+        String actual = "feminine";
+        assertEquals(expected, actual);
+
+
+
+        assertNotNull(feminine.getGenderId());
+
+
 
 
 
